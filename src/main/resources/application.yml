@@ -1,0 +1,97 @@
+spring:
+  profiles:
+    active: development
+  datasource:
+    tomcat:
+      max-wait: 10000
+      max-active: 50
+      test-on-borrow: true
+  batch:
+    job:
+      enabled: false
+  main:
+    allow-bean-definition-overriding: true
+
+---
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  datasource-main:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+logging:
+  file: logs/spring_batch_kotlin_sample_development.log
+  level:
+    root: INFO
+    org.springframework.web: INFO
+csv:
+  directory: src/test/resources/csv/
+
+---
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  datasource-main:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+logging:
+  file: logs/spring_batch_kotlin_sample_development.log
+  level:
+    root: INFO
+    org.springframework.web: INFO
+csv:
+  directory: src/test/resources/csv/
+
+---
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  datasource-main:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+logging:
+  file: logs/spring_batch_kotlin_sample_development.log
+  level:
+    root: INFO
+    org.springframework.web: INFO
+csv:
+  directory: src/test/resources/csv/
+
+---
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  datasource-main:
+    url: jdbc:h2:mem:devdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+logging:
+  file: logs/spring_batch_kotlin_sample_development.log
+  level:
+    root: INFO
+    org.springframework.web: INFO
+csv:
+  directory: src/test/resources/csv/
