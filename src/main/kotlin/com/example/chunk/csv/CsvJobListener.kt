@@ -13,11 +13,16 @@ public class CsvJobListener : JobExecutionListener {
 
     public var targetFile: String = ""
 
-    public var log = LoggerFactory.getLogger(CsvUploadJobListener::class.java)
+    public var log = LoggerFactory.getLogger(CsvJobListener::class.java)
 
     override fun beforeJob(jobExecution: JobExecution) {
-        targetFile = jobExecution.getJobParameters().getString("targetFile")
-        log.info("${jobExecution.getJobInstance().getJobName()} Start, targetFile: ${targetFile}")
+        var tempFile = jobExecution.getJobParameters().getString("targetFile")
+        if (tempFile.isNullOrEmpty()) {
+            this.targetFile = "test.csv"
+        } else {
+            this.targetFile = tempFile
+        }
+        log.info("${jobExecution.getJobInstance().getJobName()} Start, targetFile: ${this.targetFile}")
     }
     override fun afterJob(jobExecution: JobExecution) {
         log.info("${jobExecution.getJobInstance().getJobName()} Done, status: ${jobExecution.getStatus()}")

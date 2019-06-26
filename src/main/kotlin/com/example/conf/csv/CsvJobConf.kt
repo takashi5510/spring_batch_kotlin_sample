@@ -34,7 +34,7 @@ class CsvJobConf {
     lateinit var csvItemReader: FlatFileItemReader<InputCsv>
 
     @Autowired
-    lateinit var csvItemWriter: FlatFileItemWriter
+    lateinit var csvItemWriter: FlatFileItemWriter<OutputCsv>
 
     @Bean
     open fun csvJob(): Job {
